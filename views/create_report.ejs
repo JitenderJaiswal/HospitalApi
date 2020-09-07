@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/css/login.css" />
+
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header"><h3>Create Report</h3></div>
+      <div class="card-body">
+
+        <form
+          action="/api/v1/patients/create_report/<%= patient.id %>"
+          method="POST"
+        >
+          
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><input
+                  type="radio"
+                  id="Negative"
+                  name="status"
+                  value="Negative"
+              /></span>
+            </div>
+            <label for="Negative">Negative</label><br />
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><input
+                  type="radio"
+                  id="Travelled-Quarantine"
+                  name="status"
+                  value="Travelled-Quarantine"
+              /></span>
+            </div>
+            <label for="Travelled-Quarantine">Travelled-Quarantine</label><br />
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><input
+                  type="radio"
+                  id="Symptoms-Quarantine"
+                  name="status"
+                  value="Symptoms-Quarantine"
+              /></span>
+            </div>
+            <label for="Symptoms-Quarantine">Symptoms-Quarantine</label><br />
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><input
+                  type="radio"
+                  id="Positive-Admit"
+                  name="status"
+                  value="Positive-Admit"
+              /></span>
+            </div>
+            <label for="Positive-Admit">Positive-Admit</label><br />
+          </div>
+       
+
+        <div class="form-group">
+          <input type="submit" value="Submit" class="btn login_btn" />
+        </div>
+      </form>
+      </div>
+
+        <div class="card-footer">
+          <div class="d-flex justify-content-center">
+            <a href="/api/v1/patients/all_reports/<%= patient.id %> "
+              >All Report</a
+            >
+          </div>
+        </div>
+    
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/docter_register.css" />
+<link rel="stylesheet" href="/css/login.css" />
+
+<!--<%if (locals.docter){ %>-->
+<div><a href="api/v1/patients/register">Patient Register</a></div>
+<div><a href="api/v1/reports/">Status</a></div>
+<!--<% }else{ %>-->
+<div class="card-header center"><h3>Home Page</h3></div>
+<div><a href="api/v1/patients/register">Patient Register</a></div>
+
+
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header"><h3>Check by status</h3></div>
+      <div class="card-body">
+        <div><a href="api/v1/reports/<%= "Negative" %>">Negative</a></div>
+        <div><a href="api/v1/reports/<%= "Travelled-Quarantine" %>">Travelled Quarantine</a></div>
+        <div><a href="api/v1/reports/<%= "Symptoms-Quarantine" %>">Symptoms Quarantine</a></div>
+        <div><a href="api/v1/reports/<%= "Positive-Admit" %>">Positive Admit</a></div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+</div>
+<!--<% } %>-->

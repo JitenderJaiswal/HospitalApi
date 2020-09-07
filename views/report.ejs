@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/login.css" />
+
+<%for(r of report){%>
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header"><h3>COVID-19 Status</h3></div>
+      <div class="card-body">
+        <h2>Name: <%= r.name %></h2>
+        <h2>Status: <%= r.status %></h2>
+        <h2>Phone <%= r.phone %></h2>
+        <h2>Phone <%= r.createdAt %></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<%}%>
